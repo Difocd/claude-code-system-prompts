@@ -4,6 +4,15 @@ Note: Only use **NEW:** for entirely new prompt files, NOT for new additions/sec
 
 ### Claude Code System Prompts Changelog
 
+# [2.1.110](https://github.com/Piebald-AI/claude-code-system-prompts/commit/5249956)
+
+_+590 tokens_
+
+- **NEW:** Tool Description: PushNotification — Describes a tool that sends desktop notifications to the user's terminal and pushes to their phone when Remote Control is connected.
+- Agent Prompt: Security monitor for autonomous agent actions (second part) — Added new "Sandbox Network Callback" threat definition covering outbound connections from sandboxed Bash commands to OAST collaborators, request bins, tunnels, raw public IPs, or DNS-exfil-shaped subdomains; clarifies when to allow vs. block based on trusted domains and routine build/test/install activity.
+- System Prompt: REPL tool usage and scripting conventions — Made `gh()` shorthand and `REPO` constant conditional on whether a GitHub repo is present; added heredoc piping guidance warning against writing temp files to feed shell commands, since generic temp paths get clobbered by parallel agents.
+- Tool Description: REPL — Added guidance to pipe via heredoc instead of writing temp files for shell commands, warning that generic temp paths get clobbered by parallel agents.
+
 # [2.1.109](https://github.com/Piebald-AI/claude-code-system-prompts/commit/29ab332)
 
 _+0 tokens_
